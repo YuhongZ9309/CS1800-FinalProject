@@ -1,5 +1,6 @@
 var color1;
 var color2;
+var grid;
 var inputPixel;
 var canvasSize;
 var pixelWidth;
@@ -31,51 +32,40 @@ function setup() {
 }
 
 function checkerBoard() {
-  var array = [];
+  grid = [];
   for (var row = 0; row < canvasSize; row++) {
-    var arrayRow = [];
+    var gridRow = [];
     for (var col = 0; col < canvasSize; col++) {
-      arrayRow.push(color1);
+      gridRow.push(color1);
     }
-    array.push(arrayRow);
+    grid.push(gridRow);
   }
-  console.table(array);
-  for (var i = 0; i < array.length; i += 1) {
-    for (var j = 0; j < array[i].length; j += 1) {
+  console.table(grid);
+  for (var i = 0; i < grid.length; i += 1) {
+    for (var j = 0; j < grid[i].length; j += 1) {
       if ((j % 2) == (i % 2)) {
         push();
-        array[i][j] = color1;
-        fill(array[i][j]);
+        grid[i][j] = color1;
+        fill(grid[i][j]);
         rect(j * pixelWidth, i * pixelWidth, pixelWidth, pixelWidth)
         pop();
       } else {
         push();
-        array[i][j] = color2;
-        fill(array[i][j]);
+        grid[i][j] = color2;
+        fill(grid[i][j]);
         rect(j * pixelWidth, i * pixelWidth, pixelWidth, pixelWidth);
         pop();
       }
     }
   }
-  console.table(array);
+  console.table(grid);
 
 
 
 }
 
 function spiral() {
-  var rectSize = canvasSize - 1;
-  background(255);
-  for (i = pixelWidth / 2; i < Math.ceil(canvasSize / 2) * pixelWidth; i += pixelWidth) {
-    push();
-    stroke(i * 0.7); //color of the border
-    noFill();
-    strokeWeight(pixelWidth);
-    rect(i, i, (pixelWidth * (rectSize)), (pixelWidth * (rectSize)));
-    rectSize -= 2;
-
-    pop();
-  }
-  // rect(i+pixelWidth/2, i+pixelWidth/2, rectSize), (pixelWidth * (canvasSize - times)));
+  
 
 }
+//function createArray 
