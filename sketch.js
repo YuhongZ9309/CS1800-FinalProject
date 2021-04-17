@@ -32,6 +32,28 @@ function setup() {
 }
 
 function checkerBoard() {
+  createArray();
+  for (var i = 0; i < grid.length; i += 1) {
+    for (var j = 0; j < grid[i].length; j += 1) {
+      if ((j % 2) == (i % 2)) {
+        grid[i][j] = color1;
+      } else {
+        grid[i][j] = color2;
+      }
+    }
+  }
+  drawArray();
+}
+
+function spiral() {
+  createArray();
+  
+
+
+  drawArray();
+}
+
+function createArray() {
   grid = [];
   for (var row = 0; row < canvasSize; row++) {
     var gridRow = [];
@@ -40,32 +62,12 @@ function checkerBoard() {
     }
     grid.push(gridRow);
   }
-  console.table(grid);
+}
+function drawArray() {
   for (var i = 0; i < grid.length; i += 1) {
     for (var j = 0; j < grid[i].length; j += 1) {
-      if ((j % 2) == (i % 2)) {
-        push();
-        grid[i][j] = color1;
-        fill(grid[i][j]);
-        rect(j * pixelWidth, i * pixelWidth, pixelWidth, pixelWidth)
-        pop();
-      } else {
-        push();
-        grid[i][j] = color2;
         fill(grid[i][j]);
         rect(j * pixelWidth, i * pixelWidth, pixelWidth, pixelWidth);
-        pop();
-      }
     }
   }
-  console.table(grid);
-
-
-
 }
-
-function spiral() {
-  
-
-}
-//function createArray 
