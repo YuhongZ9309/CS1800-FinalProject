@@ -31,7 +31,7 @@ function setup() {
  //checkerBoard();
  //spiral();
  //diamond();
- cross();
+ //cross();
  //gridPattern();
 }
 
@@ -50,11 +50,14 @@ function checkerBoard() {
 }
 
 function spiral() {
-  createArray();
-  
-
-
-  drawArray();
+  for (var i = 0; i < canvasSize / 2; i += 1) {
+    if (i % 2 == 0) {
+      fill(color1);
+    } else {
+      fill(color2);
+    }
+    rect(i * pixelWidth, i * pixelWidth, pixelWidth * (canvasSize - i - i), pixelWidth * (canvasSize - i - i));
+  }
 }
 
 function diamond() {
@@ -112,7 +115,6 @@ function diamond() {
       } 
     }
   }
-
   drawArray();
 }
 
