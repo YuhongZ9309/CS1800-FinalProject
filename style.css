@@ -3,5 +3,30 @@ html, body {
   padding: 0;
 }
 canvas {
-  display: block;
+  margin: auto !important;
+  height: max-content !important;
+  width: max-content !important;
+  padding: 10px;
+}
+
+#main {
+  margin: 20px;
+}
+#title {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+#author {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+#formInput {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+
 }

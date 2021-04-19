@@ -22,6 +22,7 @@ function checkerBoard() {
 }
 
 function spiral() {
+  createArray();
   for (var i = 0; i < canvasSize / 2; i += 1) {
     if (i % 2 == 0) {
       fill(color1);

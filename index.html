@@ -10,39 +10,44 @@
 </head>
 
 <body>
-  <div class="formInput">
-    <div>
-      <label>Please enter an 8 bit binary: </label>
-      <input id="binaryInput" type="text" required>
-      <input type="button" id="binarySubmit" value="Submit">
-      <label id="binaryWarning1" style="color: red; display: none;">Please enter in binary only!</label>
-      <label id="binaryWarning2" style="color: red; display: none;">Please enter an 8 bit binary!</label>
-    </div>
-    <div>
-      <label>Please enter a 12 hexadecimal string: </label>
-      <input id="hexadecimalInput" type="text">
-      <input type="button" id="hexadecimalSubmit" value="Submit">
-      <label id="hexadecimalWarning1" style="color: red; display: none;">Please enter in hexadecimal only!</label>
-      <label id="hexadecimalWarning2" style="color: red; display: none;">Please enter a 12 hexadecimal string!</label>
-    </div>
-    <div>
-      <label>Please select a number: </label>
-      <select id="patternOption">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-      </select>
-      
-    </div>
-    <div>
-      <button id="patternSubmit">Submit</button>
-    </div>
-  </div>
-  <div id="drawing">
+  <div id="main">
+    <h1 id="title">Discrete Pattern Generator</h1>
 
-  </div>
-  <script src="sketch.js"></script>
+    <p id="author">By: Xinyu Wu and Yuhong Zhao</p>
+    <div id="formInput">
+      <div>
+        <label>Please enter an 8 bit binary: </label>
+        <input id="binaryInput" type="text" required>
+        <input type="button" id="binarySubmit" value="Submit">
+        <label id="binaryWarning1" style="color: red; display: none;">Please enter in binary only!</label>
+        <label id="binaryWarning2" style="color: red; display: none;">Please enter an 8 bit binary!</label>
+      </div>
+      <div>
+        <label>Please enter a 12 hexadecimal string: </label>
+        <input id="hexadecimalInput" type="text">
+        <input type="button" id="hexadecimalSubmit" value="Submit">
+        <label id="hexadecimalWarning1" style="color: red; display: none;">Please enter in hexadecimal only!</label>
+        <label id="hexadecimalWarning2" style="color: red; display: none;">Please enter a 12 hexadecimal string!</label>
+      </div>
+      <div>
+        <label>Please select a number: </label>
+        <select id="patternOption">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        
+      </div>
+      <div>
+        <button id="patternSubmit">Submit</button>
+      </div>
+    </div>
+    <script src="sketch.js"></script>
+    </div>
+    
+
+  
 
 
 </body>
