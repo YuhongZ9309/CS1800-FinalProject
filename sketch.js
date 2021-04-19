@@ -1,38 +1,10 @@
-var color1;
-var color2;
 var grid;
-var inputPixel;
 var canvasSize;
 var pixelWidth;
 var inputPattern;
-var inputColor;
 
 function setup() {
   noStroke();
-  createCanvas(500, 500);
-  //canvasSize = 16 //prompt("enter a 4 bit binary number");
-
-  background(220);
-  // inputPixel = prompt("enter a 8 bit binary number");
-  canvasSize = 32;
-  parseInt(inputPixel, 2);
-  pixelWidth = (800 / canvasSize);
-  inputPattern = 1; //prompt("enter a number 1")
-  if (inputPattern == 1) {
-    // inputColor = prompt("enter a 12 digit hexadecimal string");
-    color1 = "red"; // #"+ inputColor.substring(0,6);
-    color2 = "black"; //#"+ inputColor.substring(6,12);
-  } else if (inputPattern == 2) {
-    // inputColor = prompt("enter a " + (Math.ceil(0.5*canvasSize)) + " digit hexadecimal string");
-  }
-
-  resizeCanvas(canvasSize * pixelWidth, canvasSize * pixelWidth);
-
- //checkerBoard();
- //spiral();
- //diamond();
- //cross();
- //gridPattern();
 }
 
 function checkerBoard() {
@@ -50,13 +22,14 @@ function checkerBoard() {
 }
 
 function spiral() {
+  createArray();
   for (var i = 0; i < canvasSize / 2; i += 1) {
     if (i % 2 == 0) {
       fill(color1);
     } else {
       fill(color2);
     }
-    rect(i * pixelWidth, i * pixelWidth, pixelWidth * (canvasSize - i - i), pixelWidth * (canvasSize - i - i));
+  drawArray();
   }
 }
 
@@ -176,6 +149,11 @@ function cross() {
   drawArray();
 }
 function createArray() {
+  noStroke();
+  canvasSize = binaryInput;
+  pixelWidth = Math.round(800 / canvasSize);
+  createCanvas(canvasSize * pixelWidth, canvasSize * pixelWidth);
+  background(255);
   grid = [];
   for (var row = 0; row < canvasSize; row++) {
     var gridRow = [];
@@ -184,6 +162,7 @@ function createArray() {
     }
     grid.push(gridRow);
   }
+  
 }
 function drawArray() {
   for (var i = 0; i < grid.length; i += 1) {
@@ -191,14 +170,5 @@ function drawArray() {
         fill(grid[i][j]);
         rect(j * pixelWidth, i * pixelWidth, pixelWidth, pixelWidth);
     }
-  }
-}
-
-function gridPattern() {
-  stroke("yellow");
-  strokeWeight(1);
-  for (var i = 0; i <= canvasSize; i += 1) {
-        line(i * pixelWidth, 0, i * pixelWidth, canvasSize * pixelWidth);
-        line(0, i * pixelWidth, canvasSize * pixelWidth, i * pixelWidth);
   }
 }
