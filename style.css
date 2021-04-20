@@ -1,32 +1,50 @@
 html, body {
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: aliceblue;
 }
-canvas {
-  margin: auto !important;
-  height: max-content !important;
-  width: max-content !important;
-  padding: 10px;
-}
-
 #main {
   margin: 20px;
 }
+
 #title {
   margin: auto;
   width: 50%;
   padding: 10px;
   text-align: center;
 }
+
 #author {
   margin: auto;
   width: 50%;
   padding: 10px;
   text-align: center;
 }
+
 #formInput {
   margin: auto;
   width: 50%;
   padding: 10px;
+
+}
+
+.inputLabel {
+  padding: 10px;
+  /* display: inline-block; */
+}
+
+#submitButton {
+  display: flex;
+  justify-content: center;
+}
+.floatRight {
+  float: right;
+}
+#drawing {
+  margin: auto;
+  width: 50%;
+  display: flex !important;
+  justify-content: center !important;
 
 }

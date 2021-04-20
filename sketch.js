@@ -151,8 +151,8 @@ function cross() {
 function createArray() {
   noStroke();
   canvasSize = binaryInput;
-  pixelWidth = Math.round(800 / canvasSize);
-  createCanvas(canvasSize * pixelWidth, canvasSize * pixelWidth);
+  pixelWidth = Math.round(1000/ canvasSize);
+  createCanvas(canvasSize * pixelWidth, canvasSize * pixelWidth).parent('drawing');
   background(255);
   grid = [];
   for (var row = 0; row < canvasSize; row++) {
