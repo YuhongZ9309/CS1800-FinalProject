@@ -33,17 +33,17 @@ Color 2: #C2E4E7
 After inputting a binary number and hexadecimal string that determine size and color, respectively, the user chooses from a drop-down list of 4 patterns, named Checkerboard, Spiral, Diamond, and Cross.
 
 1. The checkerboard, as the name suggests, is a pattern in which Color 1 and Color 2 alternate in each row. Directly adjacent squares — top, bottom, left, right — are of the opposite color. To create this pattern, the program assigns Color 1 and Color 2 to an array (which represents the pattern) using two comparative for loops. For each position in the array, if the row and column values’ modulus of 2 is the same, then they are assigned to Color 1. Otherwise, they are assigned to Color 2.  
-![](img/checkerboard.png)
+<img src="img/checkerboard.png" alt="drawing" width="200"/>
 
 
 2. For the spiral pattern, we created a layered series of squares in which each ‘layer’ is an alternating color from the previous. In order to do so, we resize the canvas for each layer and assign a color to cover the entirety of that layer. Then, we create the next layer by subtracting two pixels from the inputted size to create a smaller square of the opposite color. To determine the color, we used a `for` loop, and added to a count `i` which increased for each additional layer. By taking the count’s modulus of 2, we were able to determine the right color for the square.  
-![](img/spiral.png)
+<img src="img/spiral.png" alt="drawing" width="200"/>
 
 3. In order to create the ‘diamond’ pattern, we first create a two dimensional row-major square array/matrix of the inputted size. Starting with an array of all Color 1, we changed certain positions to Color 2 based on their modulus, while all others stayed as Color 1. Using an outer for loop to go through each of the rows (i), and an inner loop to go through each row’s corresponding column (j), we determined the color of each pixel based on the i value’s modulus of 8 and j value’s modulus of 6. We assigned the outputted color to `grid[i][j]` of the matrix.  
-![](img/diamond.png)
+<img src="img/diamond.png" alt="drawing" width="200"/>
 
 4. The cross pattern uses a very similar approach to the diamond pattern, but with different comparisons to determine the color. We used two for loops comparing the row (i) modulus of 8 and column (j) modulus of either 8 or 4. The column value is modulus of 4 when `i % 8 == 0` or  `i % 8 == 4`; otherwise it is calculated as the modulus of 8.  
-![](img/cross.png)
+<img src="img/cross.png" alt="drawing" width="200"/>
 
 ## Total Number of Unique Patterns
 After playing around with our completed pattern art application, we were curious as to how many different unique art patterns could be developed using this program. So using basic combinations formulas that we learned in class, we were able to calculate the total number of possible patterns.
