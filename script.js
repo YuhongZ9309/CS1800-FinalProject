@@ -70,6 +70,19 @@ jQuery(document).ready(function($) {
         }
         
     })
+    $("#patternReset").click(function() {
+        $("#binaryInput").val("");
+        $("#hexadecimalInput").val("");
+        $("#binaryInput").prop("disabled", false);
+        $("#hexadecimalInput").prop("disabled", false);
+        $("#binaryWarning1").hide();
+        $("#hexadecimalWarning1").hide();
+        $("#binaryWarning2").hide();
+        $("#hexadecimalWarning2").hide();
+        $("#binarySubmit").show();
+        $("#hexadecimalSubmit").show();
+        setup();
+    })
 
 	
 });
